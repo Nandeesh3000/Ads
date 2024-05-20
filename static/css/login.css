@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(120deg,#1d1d1d, #000000);
+  height: 100vh;
+  overflow: hidden;
+}
+
+  
+img {
+  width: 45%;
+  height: 45%; 
+  object-fit: cover;
+  animation: float 3s ease-out infinite;
+  padding-left: 100px;
+  padding-top: 10%;
+}
+
+@keyframes float {
+  50% {
+  transform: translate(0, 10px);
+  }
+}
+
+
+/*Blob effect*/
+
+
+.gooey{
+  background-image: linear-gradient(120deg, #b565ff 0%, #b300ff 100%);
+  border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+  width: 495px; height: 475.2px;
+  animation: morph 4s linear infinite; 
+  transform-style: preserve-3d;
+  outline: 1px solid transparent;
+  will-change: border-radius;
+  position: absolute;
+  top: 13%;
+  left: 6%;
+  transform: translate(-50%, -50%);
+}
+
+.gooey:before,
+.gooey:after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  left: 0; top: 0;
+  border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+  box-shadow: 5px 5px 89px #aa5aff;
+  will-change: border-radius, transform, opacity;
+  animation-delay: 600ms;
+  background-image: linear-gradient(120deg, #8c00ff 0%, #8000ff 100%);
+}
+
+.gooey:before{
+  animation: morph 3s linear infinite;
+  opacity: .21;
+  animation-duration: 2s;
+}
+
+.gooey:after{
+  animation: morph 3s linear infinite;
+  animation-delay: 800ms;
+  opacity: .89;
+  line-height: 120px;
+  text-indent: -21px;
+}
+
+@keyframes morph{
+  0%,100%{
+  border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    transform: translate3d(0,0,0) rotateZ(0.01deg);
+  }
+  34%{
+      border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+    transform:  translate3d(0,5px,0) rotateZ(0.01deg);
+  }
+  50%{
+    opacity: .89;
+    transform: translate3d(0,0,0) rotateZ(0.01deg);
+  }
+  67%{
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60% ;
+    transform: translate3d(0,-3px,0) rotateZ(0.01deg);
+  }
+}
+
+@keyframes fadeIn{
+  100%{
+    transform: scale(1.03);
+    opacity: 0;
+  }
+}
+
+
+.center{
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: none;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+}
+.center h1{
+  text-align: center;
+  color: #9a41ff;
+  padding: 20px 0;
+}
+.center form{
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+form .txt_field{
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 30px 0;
+}
+.txt_field input{
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  color:#fff;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+.txt_field label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: .5s;
+}
+.txt_field span::before{
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #9041ff;
+  transition: .5s;
+}
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+  top: -5px;
+  color: #9000ff;
+}
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{
+  width: 100%;
+}
+.pass{
+  margin: -5px 0 20px 5px;
+  color: #a6a6a6;
+  cursor: pointer;
+}
+.pass:hover{
+  text-decoration: underline;
+}
+input[type="submit"] {
+    width: 100%;
+    height: 50px;
+    border: none;
+    background: #434343;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #9900ff;
+    color: #fff;
+    transition: 0.5s;
+  }
+  
+  
+.signup_link{
+  margin: 30px 0;
+  text-align: center;
+  font-size: 16px;
+  color: #666666;
+}
+.signup_link a{
+  color: #7700e0;
+  text-decoration: none;
+}
+.signup_link a:hover{
+  text-decoration: underline;
+}
+
+
+.TandC{
+  margin: 30px 0;
+  text-align: center;
+  font-size: 16px;
+  color: #666666;
+} 
+
+a{
+  color:#9500ff;
+  text-decoration: none;
+}
+
+.TandC a:hover{
+  text-decoration: underline;
+}
+
+/*Checkbox Style*/
+
+input[type="checkbox"] {
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+input[type="checkbox"]:checked {
+  accent-color: #8400ff;
+}
+
+#checkbox{
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+}
+
+
+.form-container {
+  width: 300px;
+  margin: 0 auto;
+}
+
+/*Error Msg*/
+
+#error{
+  color:#ff0000;
+
+}
