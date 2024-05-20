@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Contact.css') }}">
+    <!-- Add any additional CSS files if needed -->
+</head>
+
+<body>
+    <div class="gradient-background">
+        <div id="header">
+            <header>
+                <nav>
+                    <ul class="nav_links">
+                        <li><a href="{{ url_for('welcome') }}">Home</a></li>
+                        <li><a href="{{ url_for('about') }}">About</a></li>
+                        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                    </ul>
+                </nav>
+                <button onclick="location.href='{{ url_for('login') }}'" class="login-button">Login</button>
+            </header>
+        </div>
+
+        <div class="contact-section">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <table>
+                    <tr>
+                        <td><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15555.015538512134!2d77.4986383!3d12.9235337!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bafad1d6f18a4b9%3A0xc6082c1a24eba0bf!2sRV%20University!5e0!3m2!1sen!2sin!4v1713846214962!5m2!1sen!2sin"></iframe></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td><strong>Phone:</strong></td>
+                        <td>+91 xxx-xxx-xxxx</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Email:</strong></td>
+                        <td>support@adsgrow.com</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Address:</strong></td>
+                        <td>123 Street, Bangalore, India</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                  <h4>company</h4>
+                  <ul class="">
+                    <li><a href="{{ url_for('about') }}">about</a></li>
+                    <li><a href="#">our services</a></li>
+                    <li><a href="#">privacy policy</a></li>
+                    <li><a href="{{ url_for('contact') }}">contact</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>get help</h4>
+                  <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">payment options</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>services</h4>
+                  <ul>
+                    <li><a href="#">Image Ads</a></li>
+                    <li><a href="#">Video Ads</a></li>
+                    <!-- <li><a href="#">$</a></li>
+                    <li><a href="#">$</a></li> -->
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>follow us</h4>
+                  <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
