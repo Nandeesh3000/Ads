@@ -6,12 +6,10 @@ import base64
 from PIL import Image
 import base64
 from io import BytesIO
-from config import key
 import openai
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # Change this to a random secret key
-openai.api_key = key
 # Function to create SQLite3 database and table
 def create_user_table():
     conn = sqlite3.connect('users.db')
