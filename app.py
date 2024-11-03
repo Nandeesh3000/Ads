@@ -7,6 +7,7 @@ from PIL import Image
 import base64
 from io import BytesIO
 from config import key
+import openai
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # Change this to a random secret key
