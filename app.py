@@ -4,13 +4,9 @@ import sqlite3
 import io
 import base64
 from PIL import Image
-import torch
-import matplotlib.pyplot as plt
-import torch
 import base64
 from io import BytesIO
 from config import key
-import openai
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # Change this to a random secret key
