@@ -5,7 +5,6 @@ import io
 import base64
 from PIL import Image
 import torch
-from diffusers import StableDiffusionPipeline
 import matplotlib.pyplot as plt
 import torch
 import base64
